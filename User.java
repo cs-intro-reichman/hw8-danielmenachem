@@ -44,7 +44,7 @@
     /** If this user follows the given name, returns true; otherwise returns false. */
     public boolean follows(String name) {
         if (name.charAt(0) >= 97 && name.charAt(0) <= 122) {
-            name = (name.charAt(0) - 32) + name.substring(1); 
+            name = (char) (name.charAt(0) - 32) + name.substring(1); 
         }
         for (int i = 0; i < fCount; i++) {
             if (this.follows[i].equals(name)) {
