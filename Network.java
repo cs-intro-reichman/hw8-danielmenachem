@@ -1,4 +1,4 @@
-/** Represents a social network. The network has users, who follow other uesrs.
+ /** Represents a social network. The network has users, who follow other uesrs.
  *  Each user is an instance of the User class. */
 public class Network {
 
@@ -29,6 +29,9 @@ public class Network {
      *  If there is no such user, returns null.
      *  Notice that the method receives a String, and returns a User object. */
     public User getUser(String name) {
+        if (name == null) {
+            return false; 
+        }
         for (int i = 0; i < userCount; i++) {
             if (users[i].getName().equals(name)) {
                 return users[i]; 
